@@ -17,4 +17,10 @@ class Application < Sinatra::Base
 
     return names.split(",").sort.join(",")
   end
+
+  get "/hello" do
+    name = params[:name]
+
+    return "Hello #{name}!"
+  end
 end

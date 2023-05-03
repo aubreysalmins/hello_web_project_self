@@ -28,4 +28,13 @@ describe Application do
       expect(response.body).to eq("Alice,Joe,Julia,Kieran,Zoe")
     end
   end
+
+  context "GET /hello" do
+    it 'returns hello as an HTML page' do
+      response = get('/hello?name=Leo')
+
+      expect(response.status).to be(200)
+      expect(response.body).to eq("Hello Leo!")
+    end
+  end
 end
