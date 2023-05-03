@@ -31,7 +31,7 @@ describe Application do
 
   context "GET /hello" do
     it 'returns hello as an HTML page' do
-      response = get('/hello')
+      response = get('/hello`')
 
       expect(response.status).to be(200)
       expect(response.body).to include("<h1>Hello!</h1>")
